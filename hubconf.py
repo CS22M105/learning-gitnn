@@ -40,6 +40,9 @@ class NeuralNetwork(nn.Module):
         return logits
 
 #############################
+loss_fn = nn.CrossEntropyLoss()
+optimizer = torch.optim.SGD(model.parameters(), lr=1e-3)
+
 
 def load_data():
 
